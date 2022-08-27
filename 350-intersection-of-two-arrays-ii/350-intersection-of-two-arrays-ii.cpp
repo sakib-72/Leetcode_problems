@@ -12,8 +12,7 @@ public:
         {
             mp2[nums2[i]]++;
         }
-        if(l<m)
-        {
+        
             for(int i=0;i<l;i++)
             {
                 if(mp2[nums1[i]]>0)
@@ -22,18 +21,8 @@ public:
                     mp2[nums1[i]]--;
                 }
             }
-        }
-        else
-        {
-            for(int i=0;i<m;i++)
-            {
-                if(mp1[nums2[i]]>0)
-                {
-                    v1.push_back(nums2[i]);
-                    mp1[nums2[i]]--;
-                }
-            }
-        }
+        
+      
         return v1;
     }
 };
