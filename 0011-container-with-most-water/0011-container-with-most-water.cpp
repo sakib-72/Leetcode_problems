@@ -8,12 +8,17 @@ public:
         {
             h=min(height[i],height[j]);
             area=max(area,h*(j-i));
-            while(i<j && height[i]<=h)
+            if(height[i]<height[j])
             {
                 i++;
             }
-            while(i<j && height[j]<=h)
+            else if(height[i]>height[j])
             {
+                j--;
+            }
+            else
+            {
+                i++;
                 j--;
             }
         }
